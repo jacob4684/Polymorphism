@@ -16,28 +16,13 @@ namespace PersonPolymorphism
 
 
         protected string title;
+        protected List<IAdmissable> attendants;
 
 
         #endregion
 
 
         #region Constructor
-        #endregion
-
-
-        #region ?????
-        public IEnumerable<Student> Student
-        {
-            get;
-            set;
-        }
-
-        public Lecturer Lecturer
-        {
-            get;
-            set;
-        }
-
         #endregion
 
 
@@ -57,11 +42,60 @@ namespace PersonPolymorphism
             get { return title; }
             set { title = value; }
         }
-        
+        public IEnumerable<Student> Student
+        {
+            get;
+            set;
+        }
+
+        public Lecturer Lecturer
+        {
+            get;
+            set;
+        }
+
+        public List<IAdmissable> Attendants
+        {
+            get
+            {
+                return attendants;
+            }
+
+            set
+            {
+                attendants = value;
+            }
+        }
+
         #endregion
 
 
         #region Methods
+        public void Add(IAdmissable participant)
+        {
+            if (participant is Lecturer)
+            {
+                bool hasLeturer = false;
+                foreach (IAdmissable person in attendants)
+                {
+                    if (person is Lecturer)
+                    {
+
+                    }
+                }
+                if (!hasLeturer)
+                {
+                    attendants.Add(participant);
+                }
+            }
+            else
+            {
+                //if ()
+                //{
+
+                //}
+            }
+        }
         #endregion
     }
 }

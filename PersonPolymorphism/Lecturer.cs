@@ -13,14 +13,17 @@ namespace PersonPolymorphism
         protected short numberOfYearlyCourses;
 
 
+
+
         #endregion
 
 
         #region Constructor
-        public Lecturer(string username, string password) : base(username, password)
+        public Lecturer(string username, string password, string firstname, string lastnames, object ssn, decimal christmasBonus, decimal baseSalary, short numberOfYearlyCourses, decimal courseSalary) : base(username, password, firstname, lastnames, ssn, christmasBonus, baseSalary)
         {
+            NumberOfYearlyCourses = numberOfYearlyCourses;
+            CourseSalary = courseSalary;
         }
-
         #endregion
 
 

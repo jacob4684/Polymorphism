@@ -18,8 +18,11 @@ namespace PersonPolymorphism
 
 
         #region Constructor
-        public Person(string username, string password) : base(username, password)
+        public Person(string username, string password, string firstname, string lastnames, object ssn) : base(username, password)
         {
+            Firstname = firstname;
+            Lastnames = lastnames;
+            Ssn = ssn;
         }
         #endregion
 

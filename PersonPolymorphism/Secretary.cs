@@ -9,12 +9,13 @@ namespace PersonPolymorphism
     public class Secretary : AdministrativeEmployee
     {
 
+
         #region Fields
         #endregion
 
 
         #region Constructor
-        public Secretary(string username, string password) : base(username, password)
+        public Secretary(string username, string password, string firstname, string lastnames, object ssn, decimal christmasBonus, decimal baseSalary, byte payLevel, double yearlyRisePercent) : base(username, password, firstname, lastnames, ssn, christmasBonus, baseSalary, payLevel, yearlyRisePercent)
         {
         }
         #endregion
@@ -25,9 +26,13 @@ namespace PersonPolymorphism
 
 
         #region Methods
-        public void AdmitStudentTo(Course course)
+        public void Admit(Student student,Course course)
         {
-            throw new System.NotImplementedException();
+            course.Add(student as IAdmissable);
+        }
+        public void Admit(Lecturer lecturer, Course course)
+        {
+            course.Add(lecturer as IAdmissable);
         }
         #endregion
     }

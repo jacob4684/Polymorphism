@@ -12,13 +12,14 @@ namespace PersonPolymorphism
         protected decimal baseSalary;
         protected decimal christmasBonus;
 
-
         #endregion
 
 
         #region Constructor
-        public Employee(string username, string password) : base(username, password)
+        public Employee(string username, string password, string firstname, string lastnames, object ssn, decimal christmasBonus, decimal baseSalary) : base(username, password, firstname, lastnames, ssn)
         {
+            ChristmasBonus = christmasBonus;
+            BaseSalary = baseSalary;
         }
         #endregion
 

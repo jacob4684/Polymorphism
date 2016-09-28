@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PersonPolymorphism
 {
-    interface IAdmissable
+    public interface IAdmissable
     {
         void EnrollIn(Course Course);
     }

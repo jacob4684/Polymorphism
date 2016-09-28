@@ -13,13 +13,16 @@ namespace PersonPolymorphism
         protected double yearlyRisePercent;
 
 
-        #endregion
 
+
+        #endregion
+        public AdministrativeEmployee(string username, string password, string firstname, string lastnames, object ssn, decimal christmasBonus, decimal baseSalary, byte payLevel, double yearlyRisePercent) : base(username, password, firstname, lastnames, ssn, christmasBonus, baseSalary)
+        {
+            PayLevel = payLevel;
+            YearlyRisePercent = yearlyRisePercent;
+        }
 
         #region Constructor
-        public AdministrativeEmployee(string username, string password) : base(username, password)
-        {
-        }
 
         #endregion
 
@@ -31,7 +34,7 @@ namespace PersonPolymorphism
             get { return payLevel; }
             set { payLevel = value; }
         }
-        public double NumberOfYearlyCourses
+        public double YearlyRisePercent
         {
             get { return yearlyRisePercent; }
             set { yearlyRisePercent = value; }
