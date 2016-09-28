@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonPolymorphism", "PersonPolymorphism\PersonPolymorphism.csproj", "{A54D6E62-4B50-4E23-90C3-389B9348864F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfPolymorphism", "WpfPolymorphism\WpfPolymorphism.csproj", "{EDEFA8B1-AD12-4286-BA2A-F4170E898B1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A54D6E62-4B50-4E23-90C3-389B9348864F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A54D6E62-4B50-4E23-90C3-389B9348864F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A54D6E62-4B50-4E23-90C3-389B9348864F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDEFA8B1-AD12-4286-BA2A-F4170E898B1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDEFA8B1-AD12-4286-BA2A-F4170E898B1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDEFA8B1-AD12-4286-BA2A-F4170E898B1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDEFA8B1-AD12-4286-BA2A-F4170E898B1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
