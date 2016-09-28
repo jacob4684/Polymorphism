@@ -11,10 +11,15 @@ namespace PersonPolymorphism
         #region Fields
         protected decimal baseSalary;
         protected decimal christmasBonus;
+
+
         #endregion
 
 
         #region Constructor
+        public Employee(string username, string password) : base(username, password)
+        {
+        }
         #endregion
 
 

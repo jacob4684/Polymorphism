@@ -12,10 +12,15 @@ namespace PersonPolymorphism
         protected byte payLevel;
         protected double yearlyRisePercent;
 
+
         #endregion
 
 
         #region Constructor
+        public AdministrativeEmployee(string username, string password) : base(username, password)
+        {
+        }
+
         #endregion
 
 

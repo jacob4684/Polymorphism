@@ -13,6 +13,8 @@ namespace PersonPolymorphism
         protected string password;
 
         #endregion
+
+
         #region Constructor
         public User(string username, string password)
         {
@@ -25,6 +27,8 @@ namespace PersonPolymorphism
             catch (ArgumentException) { throw; }
         }
         #endregion
+
+
         #region Properties
         public string Username
         {
@@ -35,7 +39,7 @@ namespace PersonPolymorphism
 
             set
             {
-                if (String.IsNullOrWhiteSpace(username))
+                if (String.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentException();
                 }
@@ -78,6 +82,8 @@ namespace PersonPolymorphism
             }
         }
         #endregion
+
+
         #region Methods
         public static bool IsValidPassword(string password, out string error)
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PersonPolymorphism;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,10 +25,12 @@ namespace WpfPolymorphism
         {
             InitializeComponent();
         }
+
         private void button_Click(object sender, RoutedEventArgs e)
         {
             string username = textBox.Text;
             string password = passwordBox.Password;
+            
 
             string errorMessage = String.Empty;
             if (!User.IsValidPassword(password, out errorMessage))

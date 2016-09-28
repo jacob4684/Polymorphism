@@ -11,10 +11,15 @@ namespace PersonPolymorphism
         #region Fields
         protected DateTime startDate;
         protected short earnedECTS;
+
+
         #endregion
 
 
         #region Constructor
+        public Student(string username, string password) : base(username, password)
+        {
+        }
         #endregion
 
 

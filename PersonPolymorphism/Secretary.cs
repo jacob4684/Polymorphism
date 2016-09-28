@@ -8,11 +8,15 @@ namespace PersonPolymorphism
 {
     public class Secretary : AdministrativeEmployee
     {
+
         #region Fields
         #endregion
 
 
         #region Constructor
+        public Secretary(string username, string password) : base(username, password)
+        {
+        }
         #endregion
 
 

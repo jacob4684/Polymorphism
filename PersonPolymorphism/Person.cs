@@ -6,16 +6,21 @@ using System.Threading.Tasks;
 
 namespace PersonPolymorphism
 {
-    public class Person : User
+    public abstract class Person : User
     {
         #region Fields
         protected string firstname;
         protected string lastnames;      
         protected object ssn;
+
+
         #endregion
 
 
         #region Constructor
+        public Person(string username, string password) : base(username, password)
+        {
+        }
         #endregion
 
 

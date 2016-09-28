@@ -12,15 +12,20 @@ namespace PersonPolymorphism
         protected decimal courseSalary;
         protected short numberOfYearlyCourses;
 
+
         #endregion
 
 
         #region Constructor
+        public Lecturer(string username, string password) : base(username, password)
+        {
+        }
+
         #endregion
 
 
         #region Properties
-        
+
         public decimal CourseSalary
         {
             get { return courseSalary; }
