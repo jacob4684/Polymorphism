@@ -45,8 +45,9 @@ namespace PersonPolymorphism
         #region Methods
         public override decimal GetYearlySalary()
         {
+            decimal løntrinsPenge = 20000;
             decimal monthInAYear = 12;
-            decimal yearlySalary = baseSalary * monthInAYear + yearlyRisePercent * payLevel + christmasBonus;
+            decimal yearlySalary = baseSalary * monthInAYear + christmasBonus + løntrinsPenge * (decimal)(yearlyRisePercent * (double)payLevel);
             return yearlySalary;
         }
         #endregion
