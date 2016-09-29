@@ -45,7 +45,9 @@ namespace PersonPolymorphism
         #region Methods
         public override decimal GetYearlySalary()
         {
-            throw new System.NotImplementedException();
+            decimal monthInAYear = 12;
+            decimal yearlySalary = baseSalary * monthInAYear + yearlyRisePercent * payLevel + christmasBonus;
+            return yearlySalary;
         }
         #endregion
     }

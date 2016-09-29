@@ -46,11 +46,24 @@ namespace PersonPolymorphism
         #region Methods
         public TimeSpan StudyTimeSoFar()
         {
-            throw new System.NotImplementedException();
+            TimeSpan time = DateTime.Now-startDate;
+            return time;
         }
         public short EctsLeftTo(string degree)
         {
-            throw new System.NotImplementedException();
+            short ectsPointLeftToEarned = 0;
+            short bachelor = 180;
+            short master = 240;
+            if (degree== "Bachelor")
+            {
+                ectsPointLeftToEarned = (Int16)(earnedECTS - bachelor) ;
+            }
+            else if (degree=="Master")
+            {
+                ectsPointLeftToEarned = (Int16)(earnedECTS - master);
+            }
+            return ectsPointLeftToEarned;
+
         }
 
         public void EnrollIn(Course course)

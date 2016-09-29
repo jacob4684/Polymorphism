@@ -42,7 +42,9 @@ namespace PersonPolymorphism
         
         public virtual decimal GetYearlySalary()
         {
-            throw new System.NotImplementedException();
+            decimal monthInAYear = 12;
+            decimal yearlySalary = baseSalary * monthInAYear + christmasBonus;
+            return yearlySalary;
         }
         #endregion
     }
