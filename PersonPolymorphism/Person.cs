@@ -58,7 +58,7 @@ namespace PersonPolymorphism
                 errorType = "Something went wrong";
                 throw new ArgumentException();
             }
-            else if (password.Length < 10)
+            else if (ssn.Length < 10)
             {
                 
                 errorType = "Snn is too short, please try again.";
