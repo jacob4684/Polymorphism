@@ -49,7 +49,14 @@ namespace PersonPolymorphism
         #region Methods
         private bool IsSsnValid(out string errorType)
         {
-            throw new System.NotImplementedException();
+            errorType = "there is a error";
+            bool success = false;
+            if (!(ssn ==null))
+            {
+                success = true;
+            }
+
+            return success;
         }
         #endregion
 
