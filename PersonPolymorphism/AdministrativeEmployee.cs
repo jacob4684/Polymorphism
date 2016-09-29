@@ -11,11 +11,8 @@ namespace PersonPolymorphism
         #region Fields
         protected byte payLevel;
         protected double yearlyRisePercent;
-
-
-
-
         #endregion
+
 
         #region Constructor
         public AdministrativeEmployee(string username, string password, string firstname, string lastnames, object ssn, decimal christmasBonus, decimal baseSalary, byte payLevel, double yearlyRisePercent) : base(username, password, firstname, lastnames, ssn, christmasBonus, baseSalary)
@@ -30,7 +27,6 @@ namespace PersonPolymorphism
 
 
         #region Properties
-
         public byte PayLevel
         {
             get { return payLevel; }

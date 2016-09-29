@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace PersonPolymorphism
@@ -11,14 +12,14 @@ namespace PersonPolymorphism
         #region Fields
         protected string firstname;
         protected string lastnames;      
-        protected object ssn;
+        protected string ssn;
 
 
         #endregion
 
 
         #region Constructor
-        public Person(string username, string password, string firstname, string lastnames, object ssn) : base(username, password)
+        public Person(string username, string password, string firstname, string lastnames, string ssn) : base(username, password)
         {
             Firstname = firstname;
             Lastnames = lastnames;
@@ -38,7 +39,7 @@ namespace PersonPolymorphism
             get { return lastnames; }
             set { lastnames = value; }
         }
-        public object Ssn
+        public string Ssn
         {
             get { return ssn; }
             set { ssn = value; }
@@ -49,14 +50,31 @@ namespace PersonPolymorphism
         #region Methods
         private bool IsSsnValid(out string errorType)
         {
-            errorType = "there is a error";
-            bool success = false;
-            if (!(ssn ==null))
+            string pattern = @"^ (? !(000 | 666 | 9))\d{ 3}-(? !00)\d{ 2}-(? !0000)\d{ 4}$";
+            bool valid = false;
+
+            if (String.IsNullOrWhiteSpace(ssn))
             {
-                success = true;
+                errorType = "Something went wrong";
+                throw new ArgumentException();
+            }
+            else if (password.Length < 10)
+            {
+                
+                errorType = "Snn is too short, please try again.";
             }
 
-            return success;
+            else if (Regex.IsMatch(ssn,pattern)) 
+            {
+                errorType = String.Empty;
+                valid = true;
+            }
+            else
+            {
+                errorType = "unknow error";
+            }
+
+            return valid;
         }
         #endregion
 
