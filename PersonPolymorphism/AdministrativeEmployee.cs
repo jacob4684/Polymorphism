@@ -16,13 +16,15 @@ namespace PersonPolymorphism
 
 
         #endregion
+
+        #region Constructor
         public AdministrativeEmployee(string username, string password, string firstname, string lastnames, object ssn, decimal christmasBonus, decimal baseSalary, byte payLevel, double yearlyRisePercent) : base(username, password, firstname, lastnames, ssn, christmasBonus, baseSalary)
         {
             PayLevel = payLevel;
             YearlyRisePercent = yearlyRisePercent;
         }
 
-        #region Constructor
+        
 
         #endregion
 
