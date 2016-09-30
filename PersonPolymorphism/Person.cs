@@ -40,6 +40,12 @@ namespace PersonPolymorphism
         }
         #endregion
         #region Methods
+        /// <summary>
+        /// this method validts ssn with regex
+        /// </summary>
+        /// <param name="ssn">is a string who gets validt with regex</param>
+        /// <param name="errorType">outs to a label with the error message</param>
+        /// <returns></returns>
         public static bool IsSsnValid(string ssn,out string errorType)
         {
             string pattern = @"^ (? !(000 | 666 | 9))\d{ 3}-(? !00)\d{ 2}-(? !0000)\d{ 4}$";
