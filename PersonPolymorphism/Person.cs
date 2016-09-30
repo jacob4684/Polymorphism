@@ -60,7 +60,6 @@ namespace PersonPolymorphism
             }
             else if (ssn.Length < 10)
             {
-                
                 errorType = "Snn is too short, please try again.";
             }
 
