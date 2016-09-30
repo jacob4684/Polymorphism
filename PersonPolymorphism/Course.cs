@@ -10,22 +10,12 @@ namespace PersonPolymorphism
     {
         #region Fields
         protected DateTime startDate;
-
-
         protected DateTime endDate;
-
-
         protected string title;
         protected List<IAdmissable> attendants;
-
-
         #endregion
-
-
         #region Constructor
         #endregion
-
-
         #region Properties
         public DateTime StartDate
         {
@@ -47,29 +37,23 @@ namespace PersonPolymorphism
             get;
             set;
         }
-
         public Lecturer Lecturer
         {
             get;
             set;
         }
-
         public List<IAdmissable> Attendants
         {
             get
             {
                 return attendants;
             }
-
             set
             {
                 attendants = value;
             }
         }
-
         #endregion
-
-
         #region Methods
         public void Add(IAdmissable participant)
         {
@@ -80,7 +64,6 @@ namespace PersonPolymorphism
                 {
                     if (person is Lecturer)
                     {
-
                     }
                 }
                 if (!hasLeturer)
@@ -90,10 +73,6 @@ namespace PersonPolymorphism
             }
             else
             {
-                //if ()
-                //{
-
-                //}
             }
         }
         #endregion

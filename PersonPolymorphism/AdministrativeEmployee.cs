@@ -12,20 +12,13 @@ namespace PersonPolymorphism
         protected byte payLevel;
         protected double yearlyRisePercent;
         #endregion
-
-
         #region Constructor
         public AdministrativeEmployee(string username, string password, string firstname, string lastnames, object ssn, decimal christmasBonus, decimal baseSalary, byte payLevel, double yearlyRisePercent) : base(username, password, firstname, lastnames, ssn, christmasBonus, baseSalary)
         {
             PayLevel = payLevel;
             YearlyRisePercent = yearlyRisePercent;
         }
-
-        
-
         #endregion
-
-
         #region Properties
         public byte PayLevel
         {
@@ -38,8 +31,6 @@ namespace PersonPolymorphism
             set { yearlyRisePercent = value; }
         }
         #endregion
-
-
         #region Methods
         public override decimal GetYearlySalary()
         {

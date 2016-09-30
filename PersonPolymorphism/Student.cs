@@ -11,24 +11,15 @@ namespace PersonPolymorphism
         #region Fields
         protected DateTime startDate;
         protected short earnedECTS;
-
-
-
-
         #endregion
+        #region Constructor
         public Student(string username, string password, string firstname, string lastnames, object ssn, DateTime startDate, short earnedECTS) : base(username, password, firstname, lastnames, ssn)
         {
             StartDate = startDate;
             EarnedECTS = earnedECTS;
         }
-
-        #region Constructor
-
         #endregion
-
-
         #region Properties
-
         public DateTime StartDate
         {
             get { return startDate; }
@@ -39,10 +30,7 @@ namespace PersonPolymorphism
             get { return earnedECTS; }
             set { earnedECTS = value; }
         }
-
         #endregion
-
-
         #region Methods
         public TimeSpan StudyTimeSoFar()
         {
@@ -63,9 +51,7 @@ namespace PersonPolymorphism
                 ectsPointLeftToEarned = (Int16)(earnedECTS - master);
             }
             return ectsPointLeftToEarned;
-
         }
-
         public void EnrollIn(Course course)
         {
             course.Add(this);

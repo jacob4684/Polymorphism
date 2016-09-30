@@ -11,13 +11,7 @@ namespace PersonPolymorphism
         #region Fields
         protected decimal courseSalary;
         protected short numberOfYearlyCourses;
-
-
-
-
         #endregion
-
-
         #region Constructor
         public Lecturer(string username, string password, string firstname, string lastnames, object ssn, decimal christmasBonus, decimal baseSalary, short numberOfYearlyCourses, decimal courseSalary) : base(username, password, firstname, lastnames, ssn, christmasBonus, baseSalary)
         {
@@ -25,10 +19,7 @@ namespace PersonPolymorphism
             CourseSalary = courseSalary;
         }
         #endregion
-
-
         #region Properties
-
         public decimal CourseSalary
         {
             get { return courseSalary; }
@@ -40,8 +31,6 @@ namespace PersonPolymorphism
             set { numberOfYearlyCourses = value; }
         }
         #endregion
-
-
         #region Methods
         public override decimal GetYearlySalary()
         {

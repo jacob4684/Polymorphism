@@ -9,15 +9,11 @@ namespace PersonPolymorphism
 {
     public abstract class Person : User
     {
-        #region Fields
+        #region Fields   
         protected string firstname;
         protected string lastnames;      
         protected string ssn;
-
-
         #endregion
-
-
         #region Constructor
         public Person(string username, string password, string firstname, string lastnames, string ssn) : base(username, password)
         {
@@ -26,8 +22,6 @@ namespace PersonPolymorphism
             Ssn = ssn;
         }
         #endregion
-
-
         #region Properties
         public string Firstname
         {
@@ -45,22 +39,19 @@ namespace PersonPolymorphism
             set { ssn = value; }
         }
         #endregion
-
-
         #region Methods
         public static bool IsSsnValid(string ssn,out string errorType)
         {
             string pattern = @"^ (? !(000 | 666 | 9))\d{ 3}-(? !00)\d{ 2}-(? !0000)\d{ 4}$";
             bool valid = false;
-
             if (String.IsNullOrWhiteSpace(ssn))
             {
                 errorType = "Something went wrong";
                 throw new ArgumentException();
             }
-            else if (ssn.Length < 10)
+            else if (ssn.Length > 9)
             {
-                errorType = "Snn is too short, please try again.";
+                errorType = "Snn is too long, please try again.";
             }
 
             else if (Regex.IsMatch(ssn,pattern)) 
@@ -72,11 +63,8 @@ namespace PersonPolymorphism
             {
                 errorType = "unknow error";
             }
-
             return valid;
         }
         #endregion
-
-
     }
 }

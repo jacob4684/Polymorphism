@@ -11,10 +11,7 @@ namespace PersonPolymorphism
         #region Fields
         protected decimal baseSalary;
         protected decimal christmasBonus;
-
         #endregion
-
-
         #region Constructor
         public Employee(string username, string password, string firstname, string lastnames, object ssn, decimal christmasBonus, decimal baseSalary) : base(username, password, firstname, lastnames, ssn)
         {
@@ -22,8 +19,6 @@ namespace PersonPolymorphism
             BaseSalary = baseSalary;
         }
         #endregion
-
-
         #region Properties
         public decimal ChristmasBonus
         {
@@ -36,10 +31,7 @@ namespace PersonPolymorphism
             set { baseSalary = value; }
         }
         #endregion
-
-
         #region Methods
-        
         public virtual decimal GetYearlySalary()
         {
             decimal monthInAYear = 12;
