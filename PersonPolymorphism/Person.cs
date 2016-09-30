@@ -48,7 +48,7 @@ namespace PersonPolymorphism
 
 
         #region Methods
-        private bool IsSsnValid(out string errorType)
+        public static bool IsSsnValid(string ssn,out string errorType)
         {
             string pattern = @"^ (? !(000 | 666 | 9))\d{ 3}-(? !00)\d{ 2}-(? !0000)\d{ 4}$";
             bool valid = false;
